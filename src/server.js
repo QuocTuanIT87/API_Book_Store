@@ -19,7 +19,7 @@ var cors = require("cors");
 import { createJWT, verifyJWT } from "./middleware/JWTAction";
 
 const app = express();
-const port = 8081;
+const port = process.env.PORT || 3306;
 // process.env.PORT
 app.use(cors({ credentials: true, origin: true }));
 app.use(express.urlencoded({ extended: true }));
